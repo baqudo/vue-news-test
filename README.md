@@ -66,8 +66,25 @@ Use Pinia where shared state makes sense.
 
 - Git repository with the solution
 - `README.md` with:
-    - brief notes on decisions (structure/state/data approach) if you want
-    - “Next steps”, if you didn't have enough time to implement everything you wanted
+  - brief notes on decisions (structure/state/data approach) if you want
+  - “Next steps”, if you didn't have enough time to implement everything you wanted
+
+## Notes on decisions
+
+- Structure: kept views slim and moved reusable UI into components, with scoped styles in each component or view.
+- State: Pinia store owns async loading state and item lookup; views request data and render states.
+- Data: mock JSON served from `public/` and fetched asynchronously to simulate an API call.
+
+## Next steps
+
+- Add filters/sorting (by date, author) and basic search.
+- Add pagination or infinite scroll for larger datasets.
+- Add skeleton loaders for list and details to reduce layout shift.
+- Add image fallbacks and lazy-loading placeholders.
+- Add a small test suite for the store and views (loading/error states, routing).
+- Improve accessibility with visible focus states and keyboard-friendly card interactions.
+- Rework news card link semantics (e.g., make image/title clickable instead of the whole card).
+- Style loading/error/empty states for a more consistent UI.
 
 ## Project Setup
 

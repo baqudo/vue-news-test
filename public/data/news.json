@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Markets on edge as global inflation concerns return",
+    "shortDescription": "Investors remain cautious as new economic data revives fears of prolonged inflation and slower global growth.",
+    "content": "Global markets opened mixed after fresh inflation data suggested price pressures could persist longer than expected. Bond yields nudged higher while equities swung between gains and losses as traders weighed the outlook for rate cuts.\n\nAnalysts said the next few central bank meetings will be pivotal, with policymakers signaling they want clearer evidence that inflation is sustainably cooling. For now, investors are bracing for continued volatility across rates and equities.",
+    "author": "Eddie Munson",
+    "publishedAt": "2025-12-15",
+    "imageUrl": "https://picsum.photos/600/400?random=1"
+  },
+  {
+    "id": 2,
+    "title": "Tech giants face growing pressure over AI regulation",
+    "shortDescription": "Governments worldwide are increasing scrutiny on artificial intelligence, calling for clearer rules and accountability.",
+    "content": "Lawmakers in several countries signaled plans to accelerate AI regulation, pushing large platforms to disclose training data sources and safety practices. Industry groups warned that fragmented rules could slow innovation and raise compliance costs.\n\nRegulators say the goal is to balance innovation with safeguards, including clear accountability for harmful outcomes. Draft proposals are expected to move through committees early next year.",
+    "author": "Will Byers",
+    "publishedAt": "2025-12-14",
+    "imageUrl": "https://picsum.photos/600/400?random=2"
+  },
+  {
+    "id": 3,
+    "title": "Healthcare systems adapt to rising demand for mental health support",
+    "shortDescription": "Public and private providers are expanding services as awareness and demand continue to grow across multiple regions.",
+    "content": "Hospitals and clinics are expanding mental health services as demand rises, with many adding telehealth options and community-based programs. Providers say the surge is driven by increased awareness and broader coverage for behavioral care.\n\nHealth officials noted ongoing staffing challenges, particularly for counselors and clinical psychologists. Several regions are piloting fast-track training programs to close gaps in care access.",
+    "author": "Will Byers",
+    "publishedAt": "2025-12-14",
+    "imageUrl": "https://picsum.photos/600/400?random=3"
+  },
+  {
+    "id": 4,
+    "title": "Electric vehicle sales slow amid charging infrastructure concerns",
+    "shortDescription": "Despite long-term growth, consumers remain hesitant due to limited charging availability and high costs.",
+    "content": "Electric vehicle sales growth cooled this quarter as buyers weighed higher upfront prices against uneven access to fast chargers. Automakers reported strong interest in smaller models, but said conversion from interest to purchases has slowed.\n\nIndustry groups are urging faster deployment of public charging networks and clearer incentives. Several manufacturers said they will prioritize hybrid launches while battery costs remain elevated.",
+    "author": "Eddie Munson",
+    "publishedAt": "2025-12-13",
+    "imageUrl": "https://picsum.photos/600/400?random=4"
+  },
+  {
+    "id": 5,
+    "title": "Major streaming platforms rethink content strategies",
+    "shortDescription": "Media companies are adjusting production and release plans in response to changing viewer habits.",
+    "content": "Streaming services are shifting budgets toward fewer, higher-impact releases as subscriber growth slows. Executives say the focus is moving to retention, with shorter seasons and broader release windows replacing weekly drops in some markets.\n\nAnalysts expect more co-productions and licensing deals as platforms prioritize profitability. Viewers are likely to see a leaner mix of originals alongside refreshed library content.",
+    "author": "Mike Wheeler",
+    "publishedAt": "2025-12-12",
+    "imageUrl": "https://picsum.photos/600/400?random=5"
+  },
+  {
+    "id": 6,
+    "title": "Severe weather disrupts travel across parts of Europe",
+    "shortDescription": "Heavy storms and flooding have caused delays and cancellations, affecting thousands of passengers.",
+    "content": "Airports across several European hubs reported delays and cancellations after severe storms brought flooding and high winds. Rail operators also warned of slower services as crews cleared debris and inspected tracks.\n\nTravel agencies advised passengers to check carrier alerts and consider flexible rebooking options. Weather services said conditions should improve over the next 24 to 48 hours, though some regional disruption may linger.",
+    "author": "Will Byers",
+    "publishedAt": "2025-12-12",
+    "imageUrl": "https://picsum.photos/600/400?random=6"
+  }
+]
