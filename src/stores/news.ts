@@ -1,60 +1,56 @@
 import { defineStore } from 'pinia';
+import { computed, ref } from 'vue';
 
 import type { NewsItem } from '@/types/news';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-interface NewsState {
-  items: NewsItem[];
-  status: Status;
-  error: string | null;
-}
+const normalizeError = (err: unknown) =>
+  err instanceof Error ? err.message : 'Unknown error';
 
-export const useNewsStore = defineStore('news', {
-  state: (): NewsState => ({
-    items: [],
-    status: 'idle',
-    error: null,
-  }),
+export const useNewsStore = defineStore('news', () => {
+  const items = ref<NewsItem[]>([]);
+  const status = ref<Status>('idle');
+  const error = ref<string | null>(null);
 
-  getters: {
-    getById: (state) => {
-      return (id: number) => state.items.find((item) => item.id === id);
-    },
-  },
+  const getById = computed(() => (id: number) =>
+    items.value.find((item) => item.id === id),
+  );
 
-  actions: {
-    async fetchNews(options?: { force?: boolean }) {
-      const force = options?.force ?? false;
+  const fetchNews = async (options?: { force?: boolean }) => {
+    const force = options?.force ?? false;
 
-      if (this.status === 'loading') {return;}
-      if (!force && this.items.length) {return;}
+    if (status.value === 'loading') {return;}
+    if (!force && items.value.length) {return;}
 
-      this.status = 'loading';
-      this.error = null;
+    status.value = 'loading';
+    error.value = null;
 
-      try {
-        // simulate async call
-        const response = await fetch('/data/news.json');
+    try {
+      // simulate async call
+      const response = await fetch('/data/news.json');
 
-        if (!response.ok) {throw new Error('Failed to load news');}
+      if (!response.ok) {throw new Error('Failed to load news');}
 
-        const data = (await response.json()) as NewsItem[];
+      const data = (await response.json()) as NewsItem[];
 
-        // Optional: sort by date desc
-        this.items = data.sort(
-          (a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt),
-        );
+      // Optional: sort by date desc
+      items.value = data.sort(
+        (a, b) => +new Date(b.publishedAt) - +new Date(a.publishedAt),
+      );
 
-        this.status = 'success';
-      } catch (err: unknown) {
-        this.status = 'error';
-        if (err instanceof Error) {
-          this.error = err.message;
-        } else {
-          this.error = 'Unknown error';
-        }
-      }
-    },
-  },
+      status.value = 'success';
+    } catch (err: unknown) {
+      status.value = 'error';
+      error.value = normalizeError(err);
+    }
+  };
+
+  return {
+    items,
+    status,
+    error,
+    getById,
+    fetchNews,
+  };
 });
